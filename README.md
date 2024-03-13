@@ -39,11 +39,11 @@ In order to train the model on entire FloorPlanCAD dataset, users need first dow
 
 ### download from floorplancad website
 ```
-python preprocess/download_data.py  --data_save_dir  /ssd1/zhiwen/datasets/svg_raw
+python preprocess/download_data.py  --data_save_dir  datasets/svg_raw
 ```
 ### convert semantic labeling to floorplanCAD v1 version and generate rasterized images
 ```
-python preprocess/svg2png.py --train_00 datasets/svg_raw/train-00 --train_01 datasets/svg_raw/train-01  --test_00  datasets/svg_raw/test-00   --svg_dir zhiwen/datasets/svg_processed/svg   --png_dir datasets/svg_processed/png   --scale 7  --cvt_color
+python preprocess/svg2png.py --train_00 datasets/svg_raw/train-00 --train_01 datasets/svg_raw/train-01  --test_00  datasets/svg_raw/test-00   --svg_dir datasets/svg_processed/svg   --png_dir datasets/svg_processed/png   --scale 7  --cvt_color
 ```
 ### generate npy format data
 ```
@@ -52,7 +52,7 @@ python preprocess/preprocess_svg.py -i datasets/svg_processed/svg/test  -o datas
 python preprocess/preprocess_svg.py -i datasets/svg_processed/svg/val  -o datasets/svg_processed/npy/val   --thread_num  48
 ```
 mkdir data
-ln -s /ssd1/zhiwen/datasets/svg_processed   ./data/floorplancad_v2
+ln -s datasets/svg_processed ./data/floorplancad_v2
 ```
 ├── data
 ├──├── FloorPlanCAD
