@@ -20,6 +20,11 @@ svgpathtools
 ```
 Our code should compatible with pytorch>=1.5.0
 
+### Install Pytorch
+```
+pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
 ## Download Pretrained HRNet
 The Input Embedding network is based on HRNet-W48-C, the pretrained model on ImageNet can be download from official [cloud drive](https://github.com/HRNet/HRNet-Image-Classification).
 ```
